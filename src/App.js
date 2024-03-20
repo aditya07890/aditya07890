@@ -16,6 +16,7 @@ import Counters from "./components/counter";
 import ImageGallery from "./components/ImageGallery";
 import Imageslider from "./components/use-effact";
 import Footer from "./components/footer";
+import InteriorDesign from "./components/web/Interior Design";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/imagegallery" element={<ImageGallery />} />
         <Route path="/use-effect" element={<Imageslider />} />
         <Route path="footer" element={<Footer />} />
+        <Route path="interioir" element={<InteriorDesign />} />
       </Routes>
     </BrowserRouter>
   );
