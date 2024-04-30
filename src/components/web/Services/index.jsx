@@ -5,8 +5,8 @@ const Services = () => {
     <>
       <div className="mt-5 p-10">
         <div className="text-4xl p-5">
-          <p className="text-red-500 font-bold text-5xl">Services.</p>
-          <p className="bg-red-500  p-1 rounded w-10 h-2 mt-5"></p>
+          <p className="text-red-600 font-bold text-5xl">Services.</p>
+          <p className="bg-red-600  p-1 rounded w-10 h-2 mt-5"></p>
         </div>
         <div className="p-5 ">
           <p className="">

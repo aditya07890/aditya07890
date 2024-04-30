@@ -5,8 +5,8 @@ const Packages = () => {
     <>
       <div className="mt-5 p-10">
         <div className="text-4xl p-5">
-          <p className="text-red-500 font-bold text-5xl">Packages.</p>
-          <p className="bg-red-500  p-1 rounded w-10 h-2 mt-5"></p>
+          <p className="text-red-600 font-bold text-5xl">Packages.</p>
+          <p className="bg-red-600  p-1 rounded w-10 h-2 mt-5"></p>
         </div>
         <div className="p-5 ">
           <p className="font-serif">
@@ -17,18 +17,22 @@ const Packages = () => {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-2 text-center">
-          <div className="flex flex-col">
-            <p className="bg-gray-600 text-center text-white py-5">Basic</p>
+          <div className="flex flex-col text-center">
+            <p className="bg-gray-600 text-xl py-4">Basic</p>
             <div className="bg-neutral-300 *:p-3 *:border *:font-semibold">
               <p>Floorplanning</p>
               <p>10 hours support</p>
               <p>Photography</p>
               <p>20% furniture discount</p>
               <p>Good deals</p>
-              <p>
-                $ 199 <p>per room</p>
+              <p className="h-24 text-2xl">
+                $ 199 <p className="text-gray-400 h-10">per room</p>
               </p>
-              <p className="h-24">Sign Up</p>
+              <p className="h-20">
+                <button className="justify-center items-center bg-white h-10 w-20 text-black hover:bg-black hover:text-white">
+                  Sign Up
+                </button>
+              </p>
             </div>
           </div>
           <div className="flex flex-col text-center">
@@ -39,10 +43,14 @@ const Packages = () => {
               <p>50 hours support</p>
               <p>50% furniture discount</p>
               <p>GREAT deals</p>
-              <p>
-                $ 249 <p>per room</p>
+              <p className="h-24 text-2xl">
+                $ 249 <p className="text-gray-400 ">per room</p>
               </p>
-              <p className="justify-center items-center h-24">Sign Up</p>
+              <p className="h-20">
+                <button className="justify-center items-center h-10 w-20 bg-red-500 text-white hover:bg-black">
+                  Sign Up
+                </button>
+              </p>
             </div>
           </div>
         </div>

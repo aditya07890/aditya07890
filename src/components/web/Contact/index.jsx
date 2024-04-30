@@ -14,14 +14,14 @@ const Contact = () => {
             with the details :) We love meeting new people!
           </p>
         </div>
-        <div className="flex flex-col gap-2 font-serif ">
+        <div className="flex flex-col gap-2 font-serif items-center ">
           Name
           <input type="text" className="border w-[60rem] h-10" />
           Email
           <input type="text" className="border w-[60rem] h-10" />
           Message
           <input type="text" className="border w-[60rem] h-10" />
-          <p className="bg-red-600 h-14 text-center pt-4 hover:bg-gray-600-400">
+          <p className="bg-red-600 h-14 w-[60rem] text-center pt-4 hover:bg-gray-400">
             Send Message
           </p>
         </div>

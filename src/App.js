@@ -17,6 +17,13 @@ import ImageGallery from "./components/ImageGallery";
 import Imageslider from "./components/use-effact";
 import Footer from "./components/footer";
 import InteriorDesign from "./components/web/Interior Design";
+import FormDemo from "./components/from";
+import ProductOrderForm from "./components/ProductForm";
+import FornHandling from "./components/fromhandling";
+import SRegistrationForm from "./components/registerfrom";
+import DRegistrationForm from "./components/form2";
+import BRArchitects from "./components/brachride";
+import SignUp from "./components/fromika";
 
 function App() {
   return (
@@ -39,6 +46,13 @@ function App() {
         <Route path="/use-effect" element={<Imageslider />} />
         <Route path="footer" element={<Footer />} />
         <Route path="interioir" element={<InteriorDesign />} />
+        <Route path="from" element={<FormDemo />} />
+        <Route path="prodactfrom" element={<ProductOrderForm />} />
+        <Route path="fromhandle" element={<FornHandling />} />
+        <Route path="fromreg" element={<SRegistrationForm />} />
+        <Route path="fromA" element={<DRegistrationForm />} />
+        <Route path="architects" element={<BRArchitects />} />
+        <Route path="nameroll" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );
