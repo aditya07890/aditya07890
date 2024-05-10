@@ -24,6 +24,13 @@ import SRegistrationForm from "./components/registerfrom";
 import DRegistrationForm from "./components/form2";
 import BRArchitects from "./components/brachride";
 import SignUp from "./components/fromika";
+import Products from "./components/apifetch";
+import UserName from "./components/Apifatch2";
+import SignUpa from "./components/Authentication/SignUp";
+import Register from "./components/Authentication/Register";
+import SignIn1 from "./components/Authentication/SignIn";
+import Login from "./components/Authentication/login";
+import Profile from "./components/Authentication/profile";
 
 function App() {
   return (
@@ -53,6 +60,13 @@ function App() {
         <Route path="fromA" element={<DRegistrationForm />} />
         <Route path="architects" element={<BRArchitects />} />
         <Route path="nameroll" element={<SignUp />} />
+        <Route path="products" element={<Products />} />
+        <Route path="username" element={<UserName />} />
+        <Route path="Singupa" element={<SignUpa />} />
+        <Route path="register" element={<Register />} />
+        <Route path="/Singin1" element={<SignIn1 />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
