@@ -2,10 +2,11 @@ import { Avatar, Button, Dialog, Divider, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Register from "../Authentication/Register";
+import Courses from "../Courses";
 
 const Home = ({ num }) => {
   const [open, setOpen] = useState(false);
-  const [page, setPage] = useState("Register");
+  const [page, setPage] = useState("Singin1");
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
@@ -52,6 +53,7 @@ const Home = ({ num }) => {
           <button onClick={() => navigate("/Singin1")}>Login</button>
         )}
       </div>
+      <Courses />
       <Dialog open={open} onClose={() => setOpen(false)}>
         <div className="w-96">
           <div className="flex h-10">
@@ -64,7 +66,7 @@ const Home = ({ num }) => {
             </Button>
             <div className="h-full border" />
             <Button
-              color={page === "SignIn1" ? "success" : "primary"}
+              color={page === "" ? "success" : "primary"}
               className="!w-full"
               onClick={() => setPage("SignIn1")}
             >
@@ -73,7 +75,7 @@ const Home = ({ num }) => {
           </div>
           <Divider />
           {page === "register" && <Register />}
-          {page === "Singin1" && <Singin1 />}
+          {page === "singIn1" && <SignIn1 />}
         </div>
       </Dialog>
       <Menu anchorEl={anchorEl} open={isOpen} onClose={() => setAnchorEl(null)}>

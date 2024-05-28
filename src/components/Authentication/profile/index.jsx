@@ -43,9 +43,9 @@ const Profile = () => {
         <div className="flex justify-center items-center gap-5 p-5">
           <Button
             className="!bg-emerald-600 !text-white"
-            onClick={() => Navigate("/Register")}
+            onClick={() => Navigate("/ProfileUpdate")}
           >
-            Register
+            UpDateProfile
           </Button>
         </div>
       </div>

@@ -31,6 +31,9 @@ import Register from "./components/Authentication/Register";
 import SignIn1 from "./components/Authentication/SignIn";
 import Login from "./components/Authentication/login";
 import Profile from "./components/Authentication/profile";
+import ProfileUpdate from "./components/Authentication/profile/updateprofile";
+import Courses from "./components/Courses";
+import CourseDetail from "./components/CourseDetail";
 
 function App() {
   return (
@@ -67,6 +70,9 @@ function App() {
         <Route path="/Singin1" element={<SignIn1 />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/ProfileUpdate" element={<ProfileUpdate />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:course_id" element={<CourseDetail />} />
       </Routes>
     </BrowserRouter>
   );
