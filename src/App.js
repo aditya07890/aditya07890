@@ -11,8 +11,8 @@ import Clicked from "./components/fundemo3";
 import ArrayDemo from "./components/arrayde";
 import Amazon from "./components/amazon";
 import UseStateDemo from "./components/usestate";
-import Counter from "./conut";
-import Counters from "./components/counter";
+// import Counter from "./conut";
+// import Counters from "./components/counter";
 import ImageGallery from "./components/ImageGallery";
 import Imageslider from "./components/use-effact";
 import Footer from "./components/footer";
@@ -34,8 +34,36 @@ import Profile from "./components/Authentication/profile";
 import ProfileUpdate from "./components/Authentication/profile/updateprofile";
 import Courses from "./components/Courses";
 import CourseDetail from "./components/CourseDetail";
+import { Countera } from "./redux/counter";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+import { setData } from "./redux/profile";
+import { useEffect } from "react";
+import { setProducts } from "./redux/prodcuts";
 
 function App() {
+  const token = localStorage.getItem("token");
+  const setDispatch = useDispatch();
+
+  console.log(token);
+
+  const getProfileFn = async () => {
+    const response = await axios.get(
+      "https://api-eduvila.onrender.com/profile",
+      { params: { token: token } }
+    );
+    setDispatch(setData(response?.data[0]));
+    console.log(response.data[0]);
+  };
+
+  const getProductsFn = async () => {
+    const response = await axios.get("https://dummyjson.com/products");
+    setDispatch(setProducts(response.products));
+  };
+  useEffect(() => {
+    getProductsFn();
+    getProfileFn();
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
@@ -50,8 +78,8 @@ function App() {
         <Route path="Arraydemo" element={<ArrayDemo />} />
         <Route path="/amazonTv" element={<Amazon />} />
         <Route path="/use-state" element={<UseStateDemo />} />
-        <Route path="/count" element={<Counter />} />
-        <Route path="/counters" element={<Counters />} />
+        {/* <Route path="/counts" element={<Counter />} />
+        <Route path="/countersa" element={<Counters />} /> */}
         <Route path="/imagegallery" element={<ImageGallery />} />
         <Route path="/use-effect" element={<Imageslider />} />
         <Route path="footer" element={<Footer />} />
@@ -73,6 +101,8 @@ function App() {
         <Route path="/ProfileUpdate" element={<ProfileUpdate />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:course_id" element={<CourseDetail />} />
+        <Route path="/counter1" element={<Countera />} />
+        <Route path="/prodcuts1" element={<Products />} />
       </Routes>
     </BrowserRouter>
   );

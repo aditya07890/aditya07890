@@ -1,25 +1,11 @@
 import { Button } from "@mui/material";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const data = useSelector((i) => i.Profile.value);
+  console.log(data);
   const Navigate = useNavigate();
-  const [data, setData] = useState({});
-  const token = localStorage.getItem("token");
-  console.log(token);
-  const getProfileFn = async () => {
-    const response = await axios.get(
-      "https://api-eduvila.onrender.com/profile",
-      { params: { token: token } }
-    );
-    console.log(response.data[0]);
-    setData(response.data[0]);
-  };
-
-  useEffect(() => {
-    getProfileFn();
-  }, []);
 
   return (
     <>
