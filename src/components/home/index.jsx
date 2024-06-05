@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Register from "../Authentication/Register";
 import Courses from "../Courses";
+import SignInq from "../Authentication/SignIn";
 
 const Home = ({ num }) => {
   const [open, setOpen] = useState(false);
@@ -50,7 +51,7 @@ const Home = ({ num }) => {
             onClick={(event) => setAnchorEl(event.currentTarget)}
           />
         ) : (
-          <button onClick={() => navigate("/Singin1")}>Login</button>
+          <button onClick={() => navigate("/Singinq")}>Login</button>
         )}
       </div>
       <Courses />
@@ -68,14 +69,14 @@ const Home = ({ num }) => {
             <Button
               color={page === "" ? "success" : "primary"}
               className="!w-full"
-              onClick={() => setPage("SignIn1")}
+              onClick={() => setPage("SignInq")}
             >
               Sign In
             </Button>
           </div>
           <Divider />
           {page === "register" && <Register />}
-          {page === "singIn1" && <SignIn1 />}
+          {page === "singInq" && <SignInq />}
         </div>
       </Dialog>
       <Menu anchorEl={anchorEl} open={isOpen} onClose={() => setAnchorEl(null)}>
