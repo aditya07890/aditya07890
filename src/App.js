@@ -28,7 +28,6 @@ import Products from "./components/apifetch";
 import UserName from "./components/Apifatch2";
 import SignUpa from "./components/Authentication/SignUp";
 import Register from "./components/Authentication/Register";
-import SignIn1 from "./components/Authentication/SignIn";
 import Login from "./components/Authentication/login";
 import Profile from "./components/Authentication/profile";
 import ProfileUpdate from "./components/Authentication/profile/updateprofile";
@@ -40,6 +39,7 @@ import axios from "axios";
 import { setData } from "./redux/profile";
 import { useEffect } from "react";
 import { setProducts } from "./redux/prodcuts";
+import SignInq from "./components/Authentication/SignIn";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -95,7 +95,7 @@ function App() {
         <Route path="username" element={<UserName />} />
         <Route path="Singupa" element={<SignUpa />} />
         <Route path="register" element={<Register />} />
-        <Route path="/Singin1" element={<SignIn1 />} />
+        <Route path="/Singinq" element={<SignInq />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/ProfileUpdate" element={<ProfileUpdate />} />

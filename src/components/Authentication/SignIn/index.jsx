@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-const SignIn1 = () => {
+const SignInq = () => {
   const Navigate = useNavigate();
   const registerFn = async (email, password) => {
     const response = await axios.post(
@@ -63,4 +63,4 @@ const SignIn1 = () => {
   );
 };
 
-export default SignIn1;
+export default SignInq;
